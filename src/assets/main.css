@@ -1,0 +1,25 @@
+:root {
+  --guest-toolbar-height: 48px;
+  --primary-color: #162C4F;
+}
+
+.p-inputtext:enabled:focus {
+  outline: 0 none;
+  outline-offset: 0;
+  box-shadow: none;
+  border-color: var(--primary-color);
+  border-width: 2px;
+}
+
+.dbg-border {
+  border: 1px solid red!important;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.h-calc-guest {
+  height: calc(100vh - var(--guest-toolbar-height))
+}
