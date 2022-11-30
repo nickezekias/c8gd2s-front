@@ -70,12 +70,10 @@ const rules = {
 const v$ = useVuelidate(rules, state, { $autoDirty: true });
 
 const authStore = useAuthStore();
-console.log(v$.value);
 
 async function submit(): Promise<void> {
   try {
     const isFormCorrect = await v$.value.$validate();
-    console.log("vuelidate", v$);
     if (isFormCorrect) {
       await authStore.login({ email: "you@gmail.com", password: "password" });
     } else {
