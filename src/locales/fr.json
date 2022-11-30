@@ -1,0 +1,10 @@
+{
+  "auth": {
+      "headers": {
+          "login": "Se Connecter"
+      },
+      "labels": {
+          "login": "Se Connecter"
+      }
+  }
+}

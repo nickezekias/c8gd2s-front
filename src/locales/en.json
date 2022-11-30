@@ -7,6 +7,12 @@
             "login": "Login"
         }
     },
+    "data": {
+        "languages": {
+            "english": "English",
+            "french": "French"
+        }
+    },
     "forms": {
         "errors": {
             "invalid": {

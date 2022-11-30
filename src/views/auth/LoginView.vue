@@ -22,6 +22,7 @@
             <span class="pi pi-user mr-2"></span>
             Register
           </NavLink>
+          <LanguageMenu></LanguageMenu>
         </template>
       </Toolbar>
       <div
@@ -37,6 +38,7 @@
 <script setup lang="ts">
 import Toolbar from "primevue/toolbar";
 import LoginForm from "@/components/auth/LoginForm.vue";
+import LanguageMenu from "@/components/shared/LanguageMenu.vue";
 </script>
 
 <style scoped>
