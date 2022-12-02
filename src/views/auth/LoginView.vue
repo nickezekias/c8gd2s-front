@@ -1,5 +1,5 @@
 <template>
-  <div class="grid h-screen">
+  <div class="grid h-screen bg-white">
     <div
       class="col-12 md:col-5 lg:col-3 hidden md:block h-full bg-primary p-0 relative"
     >
