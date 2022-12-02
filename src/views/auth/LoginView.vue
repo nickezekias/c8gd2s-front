@@ -1,15 +1,30 @@
 <template>
   <div class="grid h-screen">
-    <div class="col-12 md:col-4 lg:col-3 h-full bg-primary p-0">
+    <div
+      class="col-12 md:col-5 lg:col-3 hidden md:block h-full bg-primary p-0 relative"
+    >
       <div
         class="img h-full bg-cover"
         style="
           background-image: url('https://images.pexels.com/photos/8152734/pexels-photo-8152734.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260/');
         "
       ></div>
+      <div
+        class="overlay-content flex align-items-center justify-content-center h-full w-full"
+      >
+        <Card class="bg-transparent text-white text-center shadow-none">
+          <template #content>
+            <h1 class="text-4xl text-5xl">Welcome Back</h1>
+            <p>
+              Connecting Dots is your platform to find suitable partners and
+              financiers.
+            </p>
+          </template>
+        </Card>
+      </div>
     </div>
-    <div class="col-12 md:col-8 lg:col-9 p-0 h-full overflow-y-scroll">
-      <Toolbar class="py-1 border-bottom-1 border-200">
+    <div class="col-12 md:col-7 lg:col-9 p-0 h-screen overflow-y-scroll">
+      <Toolbar class="py-1 border-bottom-1 border-400">
         <template #start> </template>
 
         <template #end>
@@ -18,7 +33,7 @@
             Login
           </NavLink>
 
-          <NavLink to="/register">
+          <NavLink to="/register" class="mr-4">
             <span class="pi pi-user mr-2"></span>
             Register
           </NavLink>
@@ -26,10 +41,10 @@
         </template>
       </Toolbar>
       <div
-        class="px-4 py-8 md:px-6 lg:px-8 min-h-full w-full flex flex-column align-items-center"
+        class="px-2 md:px-4 lg:px-8 min-h-full w-full flex flex-column align-items-center justify-content-center"
       >
         <img src="/src/assets/logo.svg" alt="Logo" class="w-16rem -mb-6" />
-        <LoginForm class="w-30rem"></LoginForm>
+        <LoginForm class="w-full lg:w-30rem"></LoginForm>
       </div>
     </div>
   </div>
@@ -44,5 +59,11 @@ import LanguageMenu from "@/components/shared/LanguageMenu.vue";
 <style scoped>
 .p-toolbar {
   border-radius: 0;
+}
+.overlay-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #162c4faa;
 }
 </style>

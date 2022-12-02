@@ -3,7 +3,7 @@
   --primary-color: #162C4F;
 }
 
-.p-inputtext:enabled:focus {
+.p-inputtext:enabled:focus:not(.p-invalid) {
   outline: 0 none;
   outline-offset: 0;
   box-shadow: none;

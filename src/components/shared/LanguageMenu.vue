@@ -8,7 +8,7 @@
   >
     <img
       alt="logo"
-      :src="`/src/assets/flags/1x1/${language?.flag || 'ct'}`"
+      :src="`/src/assets/flags/1x1/${language?.flag}`"
       style="width: 4rem"
     />
   </Button>
@@ -39,6 +39,9 @@ import { ref } from "vue";
 import OverlayPanel from "primevue/overlaypanel";
 import Listbox from "primevue/listbox";
 import { useI18n } from "vue-i18n";
+import { useAppStore } from "@/stores/app";
+
+const appStore = useAppStore();
 
 const i18n = useI18n();
 
@@ -72,6 +75,8 @@ function changeAppLocale(locale: string) {
 
 function onLanguageChanged() {
   changeAppLocale(language.value.code);
+  appStore.showScreenLoader(true, 1000);
+  // appStore.setScreenLoaderDuration(3000);
 }
 </script>
 
@@ -79,9 +84,9 @@ function onLanguageChanged() {
 .language-button {
   border-radius: 100%;
   padding: 0;
-  min-width: 3rem;
-  width: 3rem;
-  height: 3rem;
+  min-width: 2.7rem;
+  width: 2.7rem;
+  height: 2.7rem;
   display: flex;
   align-content: center;
   justify-content: center;

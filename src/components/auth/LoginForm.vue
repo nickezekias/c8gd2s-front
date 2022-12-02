@@ -1,8 +1,8 @@
 <template>
   <Card class="shadow-none">
-    <template #title>
+    <!-- <template #title>
       <h1 class="text-6xl mb-0">{{ $t("auth.headers.login") }}</h1>
-    </template>
+    </template> -->
     <template #content>
       <div class="field my-4">
         <span class="p-float-label">
@@ -38,7 +38,7 @@
         <Button
           @click="submit"
           :label="$t(`auth.labels.login`)"
-          class="w-full"
+          class="w-full py-3"
         />
       </div>
     </template>
