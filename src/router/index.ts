@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
-import GuestLayout from "@/views/layouts/GuestLayout.vue";
+import GuestLayout from "@/shared/layouts/GuestLayout.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -32,23 +32,22 @@ const router = createRouter({
                 ),
             },
             {
-              path: "step-2",
+              path: "business-information",
               component: () =>
                 import(
-                  "@/app/modules/account/presentation/register/RegisterStep2.vue"
+                  "@/app/modules/account/presentation/register/steps/BusinessInfo.vue"
+                ),
+            },
+            {
+              path: "workspace",
+              component: () =>
+                import(
+                  "@/app/modules/account/presentation/register/steps/WorkspaceInfo.vue"
                 ),
             },
           ],
         },
       ],
-    },
-    {
-      path: "/about",
-      name: "about",
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import("../views/AboutView.vue"),
     },
   ],
 });

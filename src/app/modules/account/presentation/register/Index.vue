@@ -1,7 +1,7 @@
 <template>
-  <div class="grid h-screen bg-white">
+  <div class="grid grid-cols-12 h-screen bg-white">
     <div
-      class="col-12 md:col-5 lg:col-3 hidden md:block h-full bg-primary p-0 relative"
+      class="hidden md:block md:col-span-5 lg:col-span-4 h-full bg-primary p-0 relative"
     >
       <div
         class="img h-full bg-cover"
@@ -10,56 +10,40 @@
         "
       ></div>
       <div
-        class="overlay-content flex align-items-center justify-content-center h-full w-full"
+        class="overlay-content flex items-center justify-center h-full w-full"
       >
         <Card class="bg-transparent text-white text-center shadow-none">
           <template #content>
-            <h1 class="text-4xl text-5xl">Welcome Back</h1>
+            <h1 class="text-5xl">
+              {{ $t("views.auth.register.welcome.title") }}
+            </h1>
             <p>
-              Connecting Dots is your platform to find suitable partners and
-              financiers.
+              {{ $t("views.auth.register.welcome.detail") }}
             </p>
           </template>
         </Card>
       </div>
     </div>
-    <div class="col-12 md:col-7 lg:col-9 p-0 h-screen overflow-y-scroll">
-      <Toolbar class="py-1 border-bottom-1 border-400">
-        <template #start> </template>
-
-        <template #end>
-          <NavLink to="/login" class="mr-2 my-auto">
-            <span class="pi pi-lock mr-2"></span>
-            Login
-          </NavLink>
-
-          <NavLink to="/register" class="mr-4">
-            <span class="pi pi-user mr-2"></span>
-            Register
-          </NavLink>
-          <LanguageMenu></LanguageMenu>
-        </template>
-      </Toolbar>
+    <div
+      class="col-span-12 md:col-span-7 lg:col-span-8 p-0 h-screen pt-8 overflow-y-scroll"
+    >
+      <GuestAppBar />
       <div
-        class="px-2 md:px-4 lg:px-8 py-4 min-h-full w-full flex flex-column align-items-center justify-content-center"
+        class="px-2 md:px-4 lg:px-8 py-4 min-h-full w-full flex flex-col items-center justify-center"
       >
-        <img src="/src/assets/logo.svg" alt="Logo" class="w-16rem -mb-6" />
-        <RegisterForm class="w-full lg:w-30rem"></RegisterForm>
+        <img src="/src/assets/logo.svg" alt="Logo" class="w-48 -mb-6" />
+        <RegisterForm class="w-full lg:w-6/12"></RegisterForm>
       </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import Toolbar from "primevue/toolbar";
 import RegisterForm from "@/app/modules/account/presentation/register/RegisterForm.vue";
-import LanguageMenu from "@/components/shared/LanguageMenu.vue";
+import GuestAppBar from "@/shared/layouts/GuestAppBar.vue";
 </script>
 
 <style scoped>
-.p-toolbar {
-  border-radius: 0;
-}
 .overlay-content {
   position: absolute;
   top: 0;

@@ -4,7 +4,7 @@
     @click="toggle"
     aria-haspopup="true"
     aria-controls="overlay_menu"
-    class="language-button border-3 border-solid border-blue-300 border-circle"
+    class="language-button border-4 border-solid border-green-200 border-circle"
   >
     <img
       alt="logo"

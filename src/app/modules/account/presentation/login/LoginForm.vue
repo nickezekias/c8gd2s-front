@@ -34,11 +34,18 @@
           }}</small>
         </span>
       </div>
+      <div class="field my-6">
+        <Button
+          label="Forgot Password"
+          icon="pi pi-lock"
+          class="p-button-text p-button-sm bg-primary"
+        />
+      </div>
       <div class="field">
         <Button
           @click="submit"
           :label="$t(`auth.labels.login`)"
-          class="w-full py-3"
+          class="w-full py-3 bg-primary p-button-lg"
         />
       </div>
     </template>

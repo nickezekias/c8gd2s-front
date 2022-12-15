@@ -29,32 +29,63 @@
             }
         },
         "labels": {
+            "back": "Back",
             "confirmPassword": "Confirm Password",
+            "description": "Description",
             "email": "Email",
             "firstName": "First Name",
             "lastName": "Last Name",
             "name": "Name",
+            "next": "Next",
             "password": "Password",
             "phone": "Phone",
             "readTermsOfService": "Read our terms of service",
+            "register": "Register",
             "tel": "Tel",
-            "termsAgreement": "Do you agree ?"
+            "termsAgreement": "Do you agree ?",
+            "website": "Website",
+            "yearFounded": "Year Founded"
         },
         "messages": {
             "formInvalid": {
                 "title": "Form Invalid",
                 "detail": "Please fill out the form correctly"
             }
+        },
+        "placeholders": {
+            "selectCompanySize": "Select Company Size",
+            "selectCompanyType": "Select Company Type",
+            "selectCurrency": "Select Currency",
+            "selectDateFormat": "Select Date Format",
+            "selectIndustry": "Select an Industry",
+            "selectTimeFormat": "Select Time Format",
+            "selectTimezone": "Select Timezone"
         }
     },
     "views": {
         "auth": {
+            "login": {
+                "welcome": {
+                    "title": "Welcome Back",
+                    "detail": "Connecting Dots is your platform to find suitable partners and financiers."
+                }
+            },
             "register": {
                 "step1": "Personal",
                 "step1-description": "Enter your personal information",
                 "step2": "Business",
-                "step3": "Workspace"
+                "step2-description": "Enter your business information",
+                "step3": "Workspace",
+                "step3-description": "Enter your workspace region info",
+                "welcome": {
+                    "title": "Welcome",
+                    "detail": "Connecting Dots is your platform to find suitable partners and financiers."
+                }
             }
+        },
+        "layouts": {
+            "login": "Login",
+            "register": "Register"
         }
     }
 }
