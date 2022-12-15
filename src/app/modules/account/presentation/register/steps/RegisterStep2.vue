@@ -55,6 +55,7 @@
 </template>
 
 <script>
+import Dropdown from "primevue/dropdown";
 export default {
   data() {
     return {
@@ -106,5 +107,8 @@ export default {
       this.$emit("prev-page", { pageIndex: 1 });
     },
   },
+  components: {
+    Dropdown,
+  }
 };
 </script>

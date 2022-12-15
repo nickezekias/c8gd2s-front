@@ -9,35 +9,38 @@ const router = createRouter({
       component: GuestLayout,
       children: [
         {
-          path: "/",
+          path: "",
           redirect: "/login",
           meta: { middleware: ["guest"] },
         },
         {
           path: "/login",
           name: "Login",
-          component: () => import("../views/auth/LoginView.vue"),
+          component: () =>
+            import("@/app/modules/account/presentation/login/Index.vue"),
         },
         {
           path: "/register",
-          name: "Register",
-          component: () => import("../views/auth/RegisterView.vue"),
-        },
-        {
-          path: "/step-1",
           component: () =>
-            import(
-              "@/app/features/account/presentation/register/RegisterStep1.vue"
-            ),
+            import("@/app/modules/account/presentation/register/Index.vue"),
+          children: [
+            {
+              path: "",
+              component: () =>
+                import(
+                  "@/app/modules/account/presentation/register/steps/PersonalInfo.vue"
+                ),
+            },
+            {
+              path: "step-2",
+              component: () =>
+                import(
+                  "@/app/modules/account/presentation/register/RegisterStep2.vue"
+                ),
+            },
+          ],
         },
       ],
-    },
-    {
-      path: "/step-1",
-      component: () =>
-        import(
-          "@/app/features/account/presentation/register/RegisterStep1.vue"
-        ),
     },
     {
       path: "/about",

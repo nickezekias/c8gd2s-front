@@ -52,7 +52,7 @@
 
 <script setup lang="ts">
 import Toolbar from "primevue/toolbar";
-import LoginForm from "@/components/auth/LoginForm.vue";
+import LoginForm from "@/app/modules/account/presentation/login/LoginForm.vue";
 import LanguageMenu from "@/components/shared/LanguageMenu.vue";
 </script>
 

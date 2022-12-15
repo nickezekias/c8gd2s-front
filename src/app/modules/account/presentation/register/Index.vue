@@ -1,5 +1,5 @@
 <template>
-  <div class="grid h-screen">
+  <div class="grid h-screen bg-white">
     <div
       class="col-12 md:col-5 lg:col-3 hidden md:block h-full bg-primary p-0 relative"
     >
@@ -41,7 +41,7 @@
         </template>
       </Toolbar>
       <div
-        class="px-2 md:px-4 lg:px-8 min-h-full w-full flex flex-column align-items-center justify-content-center"
+        class="px-2 md:px-4 lg:px-8 py-4 min-h-full w-full flex flex-column align-items-center justify-content-center"
       >
         <img src="/src/assets/logo.svg" alt="Logo" class="w-16rem -mb-6" />
         <RegisterForm class="w-full lg:w-30rem"></RegisterForm>
@@ -52,7 +52,7 @@
 
 <script setup lang="ts">
 import Toolbar from "primevue/toolbar";
-import RegisterForm from "@/components/auth/RegisterForm.vue";
+import RegisterForm from "@/app/modules/account/presentation/register/RegisterForm.vue";
 import LanguageMenu from "@/components/shared/LanguageMenu.vue";
 </script>
 

@@ -1,7 +1,7 @@
 import { ref } from "vue";
 import { defineStore } from "pinia";
-import LoginUseCase from "@/app/features/account/domain/usecases/Login";
-import AuthWebRepository from "@/app/features/account/data/repository/AuthWebRepository";
+import LoginUseCase from "@/app/modules/account/domain/usecases/Login";
+import AuthWebRepository from "@/app/modules/account/data/repository/AuthWebRepository";
 import HttpClient from "@/app/lib/http/HttpClient";
 
 const repository = new AuthWebRepository(new HttpClient());

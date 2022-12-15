@@ -1,3 +1,4 @@
+/* eslint-disable vue/multi-word-component-names */
 import { createApp } from "vue";
 import { createPinia } from "pinia";
 
@@ -21,6 +22,10 @@ import InputText from "primevue/inputtext";
 import Card from "primevue/card";
 import ToastService from "primevue/toastservice";
 
+import Dropdown from "primevue/dropdown";
+import InputMask from "primevue/inputmask";
+import InputNumber from "primevue/inputnumber";
+
 const app = createApp(App);
 
 app.use(createPinia());
@@ -35,5 +40,9 @@ app.component("NavLink", NavLink);
 app.component("InputText", InputText);
 // eslint-disable-next-line vue/multi-word-component-names
 app.component("Card", Card);
+
+app.component("Dropdown", Dropdown);
+app.component("InputMask", InputMask);
+app.component("InputNumber", InputNumber);
 
 app.mount("#app");

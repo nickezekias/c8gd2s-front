@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="card">
-      <Steps :models="items" :readonly="true" aria-label="Form Steps" />
+      <Steps :model="items" :readonly="true" aria-label="Form Steps" />
     </div>
     <RouterView
       v-slot="{ Component }"
@@ -18,25 +18,27 @@
 </template>
 
 <script setup lang="ts">
-import Steps from "primevue/steps";
 import { ref } from "vue";
 import { useRouter } from "vue-router";
 import { useToast } from "primevue/usetoast";
+import { useI18n } from "vue-i18n";
+import Steps from "primevue/steps";
 
 const router = useRouter();
 const toast = useToast();
+const $i18n = useI18n();
 const items = ref([
   {
-    label: "First",
-    to: "/steps",
+    label: $i18n.t("views.auth.register.step1"),
+    to: "/register",
   },
   {
-    label: "Second",
-    to: "/steps/second",
+    label: $i18n.t("views.auth.register.step2"),
+    to: "/register/business-information",
   },
   {
-    label: "Third",
-    to: "/steps/third",
+    label: $i18n.t("views.auth.register.step3"),
+    to: "/register/workspace",
   },
 ]);
 const formObject: any = ref({});
@@ -48,6 +50,8 @@ const nextPage = (event: any) => {
   router.push(items.value[event.pageIndex + 1].to);
 };
 const prevPage = (event: any) => {
+  console.log("items", items.value);
+  console.log("Event", event);
   router.push(items.value[event.pageIndex - 1].to);
 };
 const complete = () => {
@@ -64,7 +68,7 @@ const complete = () => {
 };
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 ::v-deep(b) {
   display: block;
 }
