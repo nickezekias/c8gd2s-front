@@ -13,11 +13,12 @@ import PrimeVue from "primevue/config";
 import "primevue/resources/themes/md-light-deeppurple/theme.css";
 import "primevue/resources/primevue.min.css";
 import "primeicons/primeicons.css";
-import "primeflex/primeflex.css";
+// import "primeflex/primeflex.css";
+import "../public/css/tailwind.css";
 import "./assets/main.css";
 
 import Button from "primevue/button";
-import NavLink from "./components/shared/NavLink.vue";
+import NavLink from "./shared/components/NavLink.vue";
 import InputText from "primevue/inputtext";
 import Card from "primevue/card";
 import ToastService from "primevue/toastservice";
@@ -38,7 +39,6 @@ app.use(ToastService);
 app.component("Button", Button);
 app.component("NavLink", NavLink);
 app.component("InputText", InputText);
-// eslint-disable-next-line vue/multi-word-component-names
 app.component("Card", Card);
 
 app.component("Dropdown", Dropdown);
