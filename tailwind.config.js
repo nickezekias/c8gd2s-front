@@ -5,8 +5,12 @@ module.exports = {
   corePlugins: {
     preflight: false,
   },
-  content: [],
+  content: ["./src/**/*.vue"],
   theme: {
+    colors: ({ colors }) => ({
+      primary: "#162C4F",
+      ...colors,
+    }),
     extend: {},
   },
   plugins: [],
