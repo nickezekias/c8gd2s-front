@@ -30,6 +30,7 @@
         },
         "labels": {
             "back": "Back",
+            "backToLogin": "Back To Login",
             "confirmPassword": "Confirm Password",
             "description": "Description",
             "email": "Email",
@@ -41,6 +42,7 @@
             "phone": "Phone",
             "readTermsOfService": "Read our terms of service",
             "register": "Register",
+            "resetPassword": "Reset Password",
             "tel": "Tel",
             "termsAgreement": "Do you agree ?",
             "website": "Website",
@@ -64,6 +66,16 @@
     },
     "views": {
         "auth": {
+            "forgotPassword": {
+                "welcome": {
+                    "title": "Forgot Your Password ?",
+                    "detail": "Well that happens to the best of us, easily recover your password here."
+                },
+                "emailSent": {
+                    "title": "Email Sent",
+                    "detail": "If this email exists, you will receive an email with instructions to reset your password."
+                }
+            },
             "login": {
                 "welcome": {
                     "title": "Welcome Back",

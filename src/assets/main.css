@@ -1,7 +1,8 @@
 :root {
   --guest-toolbar-height: 48px;
   --primary-color: #162C4F;
-  --primary-100: #162C4F09
+  --primary-100: #162C4F09;
+  --primary-hover: #162C4FF1;
 }
 
 body {
@@ -38,6 +39,10 @@ p {
   background-color: var(--primary-color);
 }
 
+.p-button.bg-primary:hover, .p-button.bg-primary:focus {
+  background-color: var(--primary-hover);
+}
+
 .p-button-text.bg-primary {
   color: var(--primary-color)!important;
   background-color: transparent;
@@ -62,4 +67,33 @@ p {
 
 .h-calc-guest {
   height: calc(100vh - var(--guest-toolbar-height))
+}
+
+
+/*
+  ANIMATIONS
+*/
+
+.slide-fade-enter-active {
+  transition: all 0.3s ease-out;
+}
+
+.slide-fade-leave-active {
+  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  transform: translateX(20px);
+  opacity: 0;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }

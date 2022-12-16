@@ -14,6 +14,14 @@ const router = createRouter({
           meta: { middleware: ["guest"] },
         },
         {
+          path: "/forgot-password",
+          name: "Forgot Password",
+          component: () =>
+            import(
+              "@/app/modules/account/presentation/forgot-password/Index.vue"
+            ),
+        },
+        {
           path: "/login",
           name: "Login",
           component: () =>

@@ -35,11 +35,13 @@
         </span>
       </div>
       <div class="field my-6">
-        <Button
-          label="Forgot Password"
-          icon="pi pi-lock"
+        <NavLink
+          to="/forgot-password"
           class="p-button-text p-button-sm bg-primary"
-        />
+        >
+          <i class="pi pi-lock mr-2"></i>
+          Forgot Password
+        </NavLink>
       </div>
       <div class="field">
         <Button
