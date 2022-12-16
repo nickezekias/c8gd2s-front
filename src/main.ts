@@ -14,6 +14,7 @@ import "primevue/resources/themes/md-light-deeppurple/theme.css";
 import "primevue/resources/primevue.min.css";
 import "primeicons/primeicons.css";
 // import "primeflex/primeflex.css";
+import "./assets/css/theme.css";
 import "../public/css/tailwind.css";
 import "./assets/main.css";
 
