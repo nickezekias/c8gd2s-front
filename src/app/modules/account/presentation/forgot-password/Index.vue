@@ -1,6 +1,6 @@
 <!-- Created on : 2022/12/16 - 01:22:48 -->
 <template>
-  <div class="grid grid-cols-12 h-screen bg-white">
+  <div class="grid grid-cols-12 h-screen">
     <div
       class="hidden md:block md:col-span-5 lg:col-span-4 h-full bg-primary p-0 relative"
     >

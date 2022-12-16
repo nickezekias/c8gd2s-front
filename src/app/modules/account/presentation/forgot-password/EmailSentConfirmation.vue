@@ -9,7 +9,7 @@
       viewBox="0 0 24 24"
       stroke-width="1.5"
       stroke="currentColor"
-      class="w-16 h-16"
+      class="w-16 h-16 dark:text-white"
     >
       <path
         stroke-linecap="round"
@@ -30,7 +30,7 @@
       :label="$t('forms.labels.backToLogin')"
       @click="$router.push('/login')"
       icon="pi pi-angle-left"
-      class="bg-primary"
+      class="bg-primary dark:bg-blue-600"
     />
   </div>
 </template>
