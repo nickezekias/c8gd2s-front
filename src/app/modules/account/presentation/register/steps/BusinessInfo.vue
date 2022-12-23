@@ -124,12 +124,12 @@
       </template>
       <template v-slot:footer>
         <div class="flex justify-between">
-          <Button
+          <PButton
             :label="$t('forms.labels.back')"
             @click="prevPage()"
             icon="pi pi-angle-left"
           />
-          <Button
+          <PButton
             :label="$t('forms.labels.next')"
             @click="nextPage()"
             icon="pi pi-angle-right"

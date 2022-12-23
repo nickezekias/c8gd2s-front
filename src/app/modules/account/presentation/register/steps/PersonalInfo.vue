@@ -112,7 +112,7 @@
       <template v-slot:footer>
         <div class="grid grid-nogutter justify-content-between">
           <i></i>
-          <Button
+          <PButton
             :label="$t('forms.labels.next')"
             @click="nextPage()"
             icon="pi pi-angle-right"
