@@ -1,12 +1,9 @@
 <template>
   <RouterLink
-    :to="to as RouteLocationRaw"
+    :to="to"
     class="p-button router-link hover:outline-none active:outline-none outline-none"
-    :class="
-      buttonType == 'text'
-        ? 'p-button-text p-button-plain hover:bg-primary-50 hover:text-primary active:bg-primary-50 active:text-primary'
-        : ''
-    "
+    :exact-active-class="exactActiveClass"
+    :active-class="activeClass"
   >
     <slot></slot>
   </RouterLink>
@@ -16,6 +13,12 @@
 import type { RouteLocationRaw } from "vue-router";
 
 defineProps({
+  activeClass: {
+    type: String,
+  },
+  exactActiveClass: {
+    type: String,
+  },
   to: {
     type: String,
     required: true,
@@ -30,9 +33,5 @@ defineProps({
 <style scoped>
 .router-link {
   text-decoration: none;
-}
-.router-link-active {
-  color: var(--primary-color) !important;
-  background-color: var(--blue-50) !important;
 }
 </style>
