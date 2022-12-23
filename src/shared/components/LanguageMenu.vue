@@ -1,17 +1,17 @@
 <template>
-  <Button
+  <PButton
     type="button"
     @click="toggle"
     aria-haspopup="true"
     aria-controls="overlay_menu"
-    class="language-button border-4 border-solid border-green-200 border-circle"
+    class="language-button hover:enabled:bg-primary focus:enabled:bg-primary active:enabled:bg-primary border-4 border-solid border-primary-100 border-circle"
   >
     <img
       alt="logo"
       :src="`/src/assets/flags/1x1/${language?.flag}`"
       style="width: 4rem"
     />
-  </Button>
+  </PButton>
   <OverlayPanel ref="languageOp">
     <Listbox
       :options="languages"
@@ -80,7 +80,7 @@ function onLanguageChanged() {
 }
 </script>
 
-<style>
+<style scoped>
 .language-button {
   border-radius: 100%;
   padding: 0;
