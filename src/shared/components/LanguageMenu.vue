@@ -18,7 +18,7 @@
       v-model="language"
       @change="onLanguageChanged()"
       class="border-0 px-0 m-0 mx-0"
-      optionLabel="name"
+      optionLabel="label"
       :style="{ 'max-height': '250px', width: '15rem' }"
     >
       <template #option="prop">
@@ -39,7 +39,7 @@ import { ref } from "vue";
 import OverlayPanel from "primevue/overlaypanel";
 import Listbox from "primevue/listbox";
 import { useI18n } from "vue-i18n";
-import { useAppStore } from "@/stores/app";
+import { useAppStore } from "@/stores/app.store";
 
 const appStore = useAppStore();
 

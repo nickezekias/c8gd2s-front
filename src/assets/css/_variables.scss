@@ -1,0 +1,18 @@
+$primaryColor: #162C4F;
+$primaryColorText: #ffffff;
+
+:root {
+  --guest-toolbar-height: 48px;
+  --primary-color: #{$primaryColor};
+  --primary-color-text: #{$primaryColorText};
+}
+
+@media (prefers-color-scheme: dark) {
+  $primaryColor: #82B541;
+  $primaryColorText: #000000;
+
+  :root {
+    --primary-color: #{$primaryColor};
+    --primary-color-text: #{$primaryColorText};
+  }
+}

@@ -1,28 +1,26 @@
 <!-- Created on : 2022/12/16 - 01:33:50 -->
 <template>
-  <Card>
-    <template #content>
-      <form>
-        <div class="field my-4">
-          <span class="p-float-label">
-            <InputText
-              id="email"
-              type="email"
-              class="w-full"
-              :class="v$.email.$error ? 'p-invalid' : ''"
-              v-model="state.email"
-            />
-            <label for="email">{{ $t("forms.labels.email") }}</label>
-          </span>
-          <small v-if="v$.email.$error" id="email-help" class="p-error">{{
-            $t("forms.errors.invalid.email")
-          }}</small>
-        </div>
-      </form>
-    </template>
+  <TwCard>
+    <form>
+      <div class="field my-4">
+        <span class="p-float-label">
+          <InputText
+            id="email"
+            type="email"
+            class="w-full"
+            :class="v$.email.$error ? 'p-invalid' : ''"
+            v-model="state.email"
+          />
+          <label for="email">{{ $t("forms.labels.email") }}</label>
+        </span>
+        <small v-if="v$.email.$error" id="email-help" class="p-error">{{
+          $t("forms.errors.invalid.email")
+        }}</small>
+      </div>
+    </form>
     <template v-slot:footer>
       <div class="grid justify-content-between">
-        <Button
+        <PButton
           :label="$t('forms.labels.resetPassword')"
           @click="nextPage()"
           icon="pi pi-angle-right"
@@ -31,7 +29,7 @@
         />
       </div>
     </template>
-  </Card>
+  </TwCard>
 </template>
 
 <script setup lang="ts">

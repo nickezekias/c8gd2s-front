@@ -32,7 +32,16 @@
       <div
         class="px-2 md:px-4 lg:px-8 py-4 min-h-full w-full flex flex-col items-center justify-center"
       >
-        <img src="/src/assets/logo.svg" alt="Logo" class="w-48 -mb-6" />
+        <img
+          src="/src/assets/logo.svg"
+          alt="Logo"
+          class="dark:hidden w-48 -mb-6"
+        />
+        <img
+          src="/src/assets/logo-light.png"
+          alt="Logo"
+          class="hidden dark:block w-72 -mb-6"
+        />
         <Transition name="slide-fade">
           <ForgotPasswordForm
             @nextPage="

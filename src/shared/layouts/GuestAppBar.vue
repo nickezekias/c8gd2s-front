@@ -15,12 +15,13 @@
 
         <NavLink
           to="/register"
-          class="p-button-sm bg-transparent text-primary hover:bg-primary/5 dark:text-accent dark:hover:bg-accent/10 mr-4"
+          class="p-button-sm bg-transparent text-primary hover:bg-primary/5 dark:text-accent dark:hover:bg-accent/10 mr-2"
           exactActiveClass="bg-primary/5 dark:bg-accent/10"
         >
           <span class="pi pi-user-plus mr-2"></span>
           {{ $t("views.layouts.register") }}
         </NavLink>
+        <ThemeModeMenu />
         <LanguageMenu></LanguageMenu>
       </template>
     </Toolbar>
@@ -30,4 +31,5 @@
 <script setup lang="ts">
 import Toolbar from "primevue/toolbar";
 import LanguageMenu from "@/shared/components/LanguageMenu.vue";
+import ThemeModeMenu from "../components/ThemeModeMenu.vue";
 </script>

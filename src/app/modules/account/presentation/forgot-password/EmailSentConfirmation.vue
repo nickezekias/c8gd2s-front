@@ -26,11 +26,14 @@
     <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">
       {{ $t("views.auth.forgotPassword.emailSent.detail") }}
     </p>
-    <Button
+    <TwButton
       :label="$t('forms.labels.backToLogin')"
       @click="$router.push('/login')"
       icon="pi pi-angle-left"
-      class="bg-primary dark:bg-blue-600"
+      buttonType="filled"
+      color="primary"
+      darkColor="accent"
+      class="rounded-md w-full"
     />
   </div>
 </template>

@@ -35,19 +35,23 @@
         </span>
       </div>
       <div class="field my-6">
-        <NavLink
-          to="/forgot-password"
-          class="p-button-text p-button-sm bg-primary"
+        <PButton
+          class="p-button-sm bg-transparent enabled:text-red-600 hover:enabled:text-red-600 focus:enabled:bg-red-600/10 hover:enabled:bg-red-600/10"
         >
           <i class="pi pi-lock mr-2"></i>
-          Forgot Password
-        </NavLink>
+          {{ $t("forms.labels.forgotPassword") }}
+        </PButton>
       </div>
       <div class="field">
-        <Button
+        <PButton
           @click="submit"
           :label="$t(`auth.labels.login`)"
-          class="w-full py-3 bg-primary p-button-lg"
+          class="w-full py-3 bg-primary hover:enabled:bg-primary-700 focus:enabled:bg-primary-700 p-button-lg"
+        />
+
+        <PButton
+          :label="$t(`auth.labels.login`)"
+          class="w-full"
         />
       </div>
     </template>

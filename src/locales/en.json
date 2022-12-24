@@ -11,6 +11,11 @@
         "languages": {
             "english": "English",
             "french": "French"
+        },
+        "themeModes": {
+            "dark": "Dark",
+            "light": "Light",
+            "system": "System"
         }
     },
     "forms": {
@@ -35,6 +40,7 @@
             "description": "Description",
             "email": "Email",
             "firstName": "First Name",
+            "forgotPassword": "Forgot Password",
             "lastName": "Last Name",
             "name": "Name",
             "next": "Next",
