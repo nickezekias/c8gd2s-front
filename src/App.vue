@@ -1,8 +1,8 @@
 <template>
   <div
     :class="
-      appStore.themeMode === THEME_MODE_DARK ||
-      (appStore.themeMode === THEME_MODE_SYSTEM && isSystemDark)
+      appStore.userThemeMode === THEME_MODE_DARK ||
+      (!appStore.userThemeMode && isSystemDark)
         ? 'dark'
         : ''
     "
@@ -20,7 +20,7 @@ import Toast from "primevue/toast";
 import ScreenLoader from "@/shared/components/ScreenLoader.vue";
 
 import { useAppStore } from "@/stores/app.store";
-import { THEME_MODE_DARK, THEME_MODE_SYSTEM } from "./app/utils/constants";
+import { THEME_MODE_DARK } from "./app/utils/constants";
 
 const appStore = useAppStore();
 const colorSchemeDarkMatchMedia = window.matchMedia(
@@ -30,14 +30,9 @@ const colorSchemeDarkMatchMedia = window.matchMedia(
 const isSystemDark = ref(colorSchemeDarkMatchMedia.matches);
 
 onMounted(() => {
-  appStore.fetchThemeMode();
+  appStore.retrieveUserThemeMode();
 
-  // if no user defined theme mode set system theme mode as default
-  if (appStore.themeMode === "") {
-    appStore.setThemeMode(THEME_MODE_SYSTEM);
-  }
-
-  loadTheme();
+  appStore.loadTheme(appStore.userThemeMode);
 
   colorSchemeDarkMatchMedia.addEventListener(
     "change",
@@ -51,24 +46,6 @@ onUnmounted(() => {
 
 const onSystemColorSchemeChange = async () => {
   isSystemDark.value = colorSchemeDarkMatchMedia.matches;
-  if (appStore.themeMode === THEME_MODE_SYSTEM) {
-    if (isSystemDark.value) {
-      await appStore.changeTheme(appStore.darkTheme);
-    } else {
-      // isSystemDark.value = false;
-      await appStore.changeTheme(appStore.defaultTheme);
-    }
-  }
-};
-
-const loadTheme = async () => {
-  if (
-    appStore.themeMode === THEME_MODE_DARK ||
-    (appStore.themeMode === THEME_MODE_SYSTEM && isSystemDark.value)
-  ) {
-    await appStore.changeTheme(appStore.darkTheme);
-  } else {
-    await appStore.changeTheme(appStore.defaultTheme);
-  }
+  appStore.loadTheme(appStore.userThemeMode);
 };
 </script>

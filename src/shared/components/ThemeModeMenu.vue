@@ -37,7 +37,6 @@ import {
   THEME_MODE_SYSTEM,
   THEME_MODE_LIGHT,
   THEME_MODE_DARK,
-  THEME_MODE_KEY,
 } from "@/app/utils/constants";
 
 const appStore = useAppStore();
@@ -62,30 +61,34 @@ const items = ref([
     value: THEME_MODE_DARK,
   },
 ]);
-item.value = items.value[0];
 
 onMounted(() => {
-  item.value = items.value.find((val) => val.value === appStore.themeMode);
+  initSelectedItem();
 });
 
 function onItemChanged() {
-  appStore.setThemeMode(item.value.value);
-  if (appStore.themeMode === THEME_MODE_SYSTEM) {
-    window.localStorage.removeItem(THEME_MODE_KEY);
-    loadTheme(window.matchMedia("(prefers-color-scheme: dark)").matches);
-  } else {
-    window.localStorage.setItem(THEME_MODE_KEY, item.value.value);
-    loadTheme(appStore.themeMode === THEME_MODE_DARK);
+  if (item.value) {
+    if (item.value.value === THEME_MODE_SYSTEM) {
+      appStore.setUserThemeMode(null);
+    } else {
+      appStore.setUserThemeMode(item.value.value);
+    }
+    appStore.loadTheme(appStore.userThemeMode);
   }
 }
 
-const loadTheme = async (darkMode: boolean) => {
-  if (darkMode) {
-    await appStore.changeTheme(appStore.darkTheme);
+function initSelectedItem() {
+  if (!appStore.userThemeMode) {
+    item.value = items.value[0];
   } else {
-    await appStore.changeTheme(appStore.defaultTheme);
+    const found = items.value.find((themeMode) => {
+      return themeMode.value === appStore.userThemeMode;
+    });
+    if (found) {
+      item.value = found;
+    }
   }
-};
+}
 
 const toggle = (event: Event) => {
   if (op.value != null) {
