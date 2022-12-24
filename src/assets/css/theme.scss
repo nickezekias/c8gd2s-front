@@ -57,6 +57,13 @@ p {
   }
 }
 
+.p-inputtext {
+  &:enabled:focus:not(.p-invalid) {
+    border-color: var(--primary-color);
+    // border-width: 2px;
+  }
+}
+
 .p-listbox {
   &:not(.p-disabled) {
     .p-listbox-item.p-highlight.p-focus {
@@ -70,6 +77,14 @@ p {
     .p-listbox-item.p-highlight {
       color: var(--primary-color);
       background: transparentize($color: $primaryColor, $amount: 0.93);
+    }
+  }
+}
+
+.p-float-label {
+  input {
+    &:focus ~ label {
+      color: var(--primary-color);
     }
   }
 }

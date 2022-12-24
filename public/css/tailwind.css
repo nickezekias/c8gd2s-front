@@ -385,6 +385,30 @@
   padding-top: 2rem
 }
 
+.pt-12 {
+  padding-top: 3rem
+}
+
+.pt-24 {
+  padding-top: 6rem
+}
+
+.pt-20 {
+  padding-top: 5rem
+}
+
+.pt-16 {
+  padding-top: 4rem
+}
+
+.pb-4 {
+  padding-bottom: 1rem
+}
+
+.pb-8 {
+  padding-bottom: 2rem
+}
+
 .text-center {
   text-align: center
 }
@@ -492,6 +516,16 @@
   color: rgb(220 38 38 / var(--tw-text-opacity))
 }
 
+.enabled\:text-orange-600:enabled {
+  --tw-text-opacity: 1;
+  color: rgb(234 88 12 / var(--tw-text-opacity))
+}
+
+.enabled\:text-orange-500:enabled {
+  --tw-text-opacity: 1;
+  color: rgb(249 115 22 / var(--tw-text-opacity))
+}
+
 .hover\:enabled\:bg-primary:enabled:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(22 44 79 / var(--tw-bg-opacity))
@@ -510,6 +544,14 @@
   background-color: rgb(17 33 60 / var(--tw-bg-opacity))
 }
 
+.hover\:enabled\:bg-orange-600\/10:enabled:hover {
+  background-color: rgb(234 88 12 / 0.1)
+}
+
+.hover\:enabled\:bg-orange-500\/10:enabled:hover {
+  background-color: rgb(249 115 22 / 0.1)
+}
+
 .hover\:enabled\:text-primary:enabled:hover {
   --tw-text-opacity: 1;
   color: rgb(22 44 79 / var(--tw-text-opacity))
@@ -518,6 +560,16 @@
 .hover\:enabled\:text-red-600:enabled:hover {
   --tw-text-opacity: 1;
   color: rgb(220 38 38 / var(--tw-text-opacity))
+}
+
+.hover\:enabled\:text-orange-600:enabled:hover {
+  --tw-text-opacity: 1;
+  color: rgb(234 88 12 / var(--tw-text-opacity))
+}
+
+.hover\:enabled\:text-orange-500:enabled:hover {
+  --tw-text-opacity: 1;
+  color: rgb(249 115 22 / var(--tw-text-opacity))
 }
 
 .focus\:enabled\:bg-primary:enabled:focus {
@@ -538,6 +590,14 @@
   background-color: rgb(17 33 60 / var(--tw-bg-opacity))
 }
 
+.focus\:enabled\:bg-orange-600\/10:enabled:focus {
+  background-color: rgb(234 88 12 / 0.1)
+}
+
+.focus\:enabled\:bg-orange-500\/10:enabled:focus {
+  background-color: rgb(249 115 22 / 0.1)
+}
+
 .active\:enabled\:bg-primary:enabled:active {
   --tw-bg-opacity: 1;
   background-color: rgb(22 44 79 / var(--tw-bg-opacity))
@@ -547,23 +607,22 @@
   display: block
 }
 
+.dark .dark\:flex {
+  display: flex
+}
+
 .dark .dark\:hidden {
   display: none
-}
-
-.dark .dark\:border-gray-700 {
-  --tw-border-opacity: 1;
-  border-color: rgb(55 65 81 / var(--tw-border-opacity))
-}
-
-.dark .dark\:border-accent-200 {
-  --tw-border-opacity: 1;
-  border-color: rgb(207 228 180 / var(--tw-border-opacity))
 }
 
 .dark .dark\:border-accent-100 {
   --tw-border-opacity: 1;
   border-color: rgb(231 241 218 / var(--tw-border-opacity))
+}
+
+.dark .dark\:border-gray-700 {
+  --tw-border-opacity: 1;
+  border-color: rgb(55 65 81 / var(--tw-border-opacity))
 }
 
 .dark .dark\:bg-transparent {
@@ -582,6 +641,28 @@
 .dark .dark\:bg-gray-900 {
   --tw-bg-opacity: 1;
   background-color: rgb(17 24 39 / var(--tw-bg-opacity))
+}
+
+.dark .dark\:bg-page-900 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(18 18 18 / var(--tw-bg-opacity))
+}
+
+.dark .dark\:bg-accent {
+  --tw-bg-opacity: 1;
+  background-color: rgb(130 181 65 / var(--tw-bg-opacity))
+}
+
+.dark .dark\:pt-12 {
+  padding-top: 3rem
+}
+
+.dark .dark\:pt-4 {
+  padding-top: 1rem
+}
+
+.dark .dark\:pt-0 {
+  padding-top: 0px
 }
 
 .dark .dark\:text-accent {
@@ -613,11 +694,21 @@
   color: rgb(130 181 65 / var(--tw-text-opacity))
 }
 
+.dark .dark\:hover\:enabled\:bg-accent:enabled:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(130 181 65 / var(--tw-bg-opacity))
+}
+
 .dark .dark\:hover\:enabled\:bg-accent\/10:enabled:hover {
   background-color: rgb(130 181 65 / 0.1)
 }
 
-.dark .dark\:hover\:enabled\:bg-accent:enabled:hover {
+.dark .dark\:hover\:enabled\:bg-accent-700:enabled:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(108 150 54 / var(--tw-bg-opacity))
+}
+
+.dark .dark\:focus\:enabled\:bg-accent:enabled:focus {
   --tw-bg-opacity: 1;
   background-color: rgb(130 181 65 / var(--tw-bg-opacity))
 }
@@ -626,9 +717,9 @@
   background-color: rgb(130 181 65 / 0.1)
 }
 
-.dark .dark\:focus\:enabled\:bg-accent:enabled:focus {
+.dark .dark\:focus\:enabled\:bg-accent-700:enabled:focus {
   --tw-bg-opacity: 1;
-  background-color: rgb(130 181 65 / var(--tw-bg-opacity))
+  background-color: rgb(108 150 54 / var(--tw-bg-opacity))
 }
 
 .dark .dark\:active\:enabled\:bg-accent:enabled:active {

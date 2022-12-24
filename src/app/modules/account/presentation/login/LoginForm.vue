@@ -46,12 +46,7 @@
         <PButton
           @click="submit"
           :label="$t(`auth.labels.login`)"
-          class="w-full py-3 bg-primary hover:enabled:bg-primary-700 focus:enabled:bg-primary-700 p-button-lg"
-        />
-
-        <PButton
-          :label="$t(`auth.labels.login`)"
-          class="w-full"
+          class="w-full py-3 bg-primary dark:bg-accent hover:enabled:bg-primary-700 dark:hover:enabled:bg-accent-700 focus:enabled:bg-primary-700 dark:focus:enabled:bg-accent-700 p-button-lg"
         />
       </div>
     </template>
