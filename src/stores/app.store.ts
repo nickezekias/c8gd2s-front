@@ -11,6 +11,14 @@ export const useAppStore = defineStore("app", () => {
   /** user defined theme mode persisted in local storage */
   const userThemeMode = ref(localStorage.getItem(THEME_MODE_KEY));
 
+  function toggleDarkClassOnHtmlElement(isDark: boolean) {
+    if (isDark) {
+      document.getElementById("html")?.classList.add("dark");
+    } else {
+      document.getElementById("html")?.classList.remove("dark");
+    }
+  }
+
   /**
    * Change App theme
    * This function changes the href of the link element with id "theme-css" that loads the theme css of the app
@@ -44,8 +52,10 @@ export const useAppStore = defineStore("app", () => {
       (!userThemeMode &&
         window.matchMedia("(prefers-color-scheme: dark)").matches)
     ) {
+      toggleDarkClassOnHtmlElement(true);
       changeTheme(darkTheme);
     } else {
+      toggleDarkClassOnHtmlElement(false);
       changeTheme(defaultTheme);
     }
   }

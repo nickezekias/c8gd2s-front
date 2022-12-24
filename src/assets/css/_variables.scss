@@ -1,18 +1,22 @@
-$primaryColor: #162C4F;
+$primaryColor: #162c4f;
 $primaryColorText: #ffffff;
+$primaryColorDark: #82b541;
+$primaryColorDarkText: #000000;
 
-:root {
-  --guest-toolbar-height: 48px;
+@mixin light-mode {
   --primary-color: #{$primaryColor};
   --primary-color-text: #{$primaryColorText};
 }
 
-@media (prefers-color-scheme: dark) {
-  $primaryColor: #82B541;
-  $primaryColorText: #000000;
+@mixin dark-mode {
+  --primary-color: #{$primaryColorDark};
+  --primary-color-text: #{$primaryColorDarkText};
+}
 
-  :root {
-    --primary-color: #{$primaryColor};
-    --primary-color-text: #{$primaryColorText};
+:root {
+  @include light-mode;
+
+  &.dark {
+    @include dark-mode;
   }
 }

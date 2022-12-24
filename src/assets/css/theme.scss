@@ -1,4 +1,4 @@
-@import "_variables";
+@import "variables";
 
 body {
   font-family: var(--font-family);
@@ -51,33 +51,27 @@ p {
 */
 
 .p-button {
-  background-color: $primaryColor;
+  background-color: var(--primary-color);
   &:enabled:hover {
-    background: var(--primary-700);
+    background: var(--primary-color);
   }
 }
 
 .p-listbox {
   &:not(.p-disabled) {
     .p-listbox-item.p-highlight.p-focus {
-      background: transparentize($color: $primaryColor, $amount: 0.93)
+      background: transparentize($color: $primaryColor, $amount: 0.93);
     }
   }
   &.p-focus {
-    border-color: $primaryColor;
+    border-color: var(--primary-color);
   }
   .p-listbox-list {
     .p-listbox-item.p-highlight {
-      color: $primaryColor;
-      background: transparentize($color: $primaryColor, $amount: 0.93)
+      color: var(--primary-color);
+      background: transparentize($color: $primaryColor, $amount: 0.93);
     }
   }
-}
-
-/*
-  --COMPONENTS COLOR ADJUSTMENTS : DARK
-*/
-@media (prefers-color-scheme: dark) {
 }
 
 /* 
@@ -107,3 +101,25 @@ p {
   border-width: 2px;
 }
 */
+
+
+
+/**
+  ============= DARK MODE ==============
+*/
+
+.dark {
+  .p-listbox {
+    $backgroundOpacity: 0.96;
+    &:not(.p-disabled) {
+      .p-listbox-item.p-highlight.p-focus {
+        background: transparentize($color: $primaryColorDark, $amount: $backgroundOpacity);
+      }
+    }
+    .p-listbox-list {
+      .p-listbox-item.p-highlight {
+        background: transparentize($color: $primaryColorDark, $amount: $backgroundOpacity);
+      }
+    }
+  }
+}
