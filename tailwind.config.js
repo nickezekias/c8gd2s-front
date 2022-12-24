@@ -35,6 +35,7 @@ module.exports = {
       "border-primary": "#162C4F",
       "text-primary": "#162C4F",
       "text-primary-600": "#162C4F",
+      "page-900": "#121212",
       ...colors,
     }),
     extend: {},
