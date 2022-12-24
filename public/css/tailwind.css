@@ -556,6 +556,16 @@
   border-color: rgb(55 65 81 / var(--tw-border-opacity))
 }
 
+.dark .dark\:border-accent-200 {
+  --tw-border-opacity: 1;
+  border-color: rgb(207 228 180 / var(--tw-border-opacity))
+}
+
+.dark .dark\:border-accent-100 {
+  --tw-border-opacity: 1;
+  border-color: rgb(231 241 218 / var(--tw-border-opacity))
+}
+
 .dark .dark\:bg-transparent {
   background-color: transparent
 }
@@ -607,8 +617,23 @@
   background-color: rgb(130 181 65 / 0.1)
 }
 
+.dark .dark\:hover\:enabled\:bg-accent:enabled:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(130 181 65 / var(--tw-bg-opacity))
+}
+
 .dark .dark\:focus\:enabled\:bg-accent\/10:enabled:focus {
   background-color: rgb(130 181 65 / 0.1)
+}
+
+.dark .dark\:focus\:enabled\:bg-accent:enabled:focus {
+  --tw-bg-opacity: 1;
+  background-color: rgb(130 181 65 / var(--tw-bg-opacity))
+}
+
+.dark .dark\:active\:enabled\:bg-accent:enabled:active {
+  --tw-bg-opacity: 1;
+  background-color: rgb(130 181 65 / var(--tw-bg-opacity))
 }
 
 @media (min-width: 768px) {

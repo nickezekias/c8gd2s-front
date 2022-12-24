@@ -4,7 +4,7 @@
     @click="toggle"
     aria-haspopup="true"
     aria-controls="overlay_menu"
-    class="language-button hover:enabled:bg-primary focus:enabled:bg-primary active:enabled:bg-primary border-4 border-solid border-primary-100 border-circle"
+    class="language-button hover:enabled:bg-primary dark:hover:enabled:bg-accent focus:enabled:bg-primary dark:focus:enabled:bg-accent active:enabled:bg-primary dark:active:enabled:bg-accent border-4 border-solid border-primary-100 dark:border-accent-100 border-circle"
   >
     <img
       alt="logo"
