@@ -24,7 +24,7 @@
       </div>
     </div>
     <div
-      class="main-content col-span-12 md:col-span-7 lg:col-span-8 p-0 h-screen overflow-y-scroll"
+      class="main-guest-content col-span-12 md:col-span-7 lg:col-span-8 p-0 h-screen overflow-y-scroll"
     >
       <div
         class="px-2 md:px-4 lg:px-8 pb-8 w-full flex flex-col items-center justify-center"
@@ -58,9 +58,5 @@ import LoginForm from "@/app/modules/account/presentation/login/LoginForm.vue";
   top: 0;
   left: 0;
   background-color: #162c4faa;
-}
-
-.main-content {
-  padding-top: 80px;
 }
 </style>

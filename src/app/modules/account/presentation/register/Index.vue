@@ -1,5 +1,6 @@
 <template>
   <div class="grid grid-cols-12 h-screen bg-white">
+    <GuestAppBar />
     <div
       class="hidden md:block md:col-span-5 lg:col-span-4 h-full bg-primary p-0 relative"
     >
@@ -25,13 +26,23 @@
       </div>
     </div>
     <div
-      class="col-span-12 md:col-span-7 lg:col-span-8 p-0 h-screen pt-8 overflow-y-scroll"
+      class="main-guest-content col-span-12 md:col-span-7 lg:col-span-8 p-0 h-screen pt-8 overflow-y-scroll"
     >
-      <GuestAppBar />
       <div
-        class="px-2 md:px-4 lg:px-8 py-4 min-h-full w-full flex flex-col items-center justify-center"
+        class="px-2 md:px-4 lg:px-8 pb-8 w-full flex flex-col items-center justify-center"
       >
-        <img src="/src/assets/logo.svg" alt="Logo" class="w-48 -mb-6" />
+        <div>
+          <img
+            src="/src/assets/logo.svg"
+            alt="Logo"
+            class="dark:hidden w-48 -mb-6"
+          />
+          <img
+            src="/src/assets/logolight.png"
+            alt="Logo"
+            class="hidden dark:block w-72 -mb-6"
+          />
+        </div>
         <RegisterForm class="w-full lg:w-6/12"></RegisterForm>
       </div>
     </div>

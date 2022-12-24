@@ -26,7 +26,6 @@ export const useAppStore = defineStore("app", () => {
    * @returns void
    */
   async function changeTheme(theme: string) {
-    console.log("THEME", theme);
     const elementId = "theme-css";
     const linkElement = document.getElementById(elementId);
     const cloneLinkElement = linkElement?.cloneNode(true) as HTMLElement;

@@ -83,8 +83,28 @@ p {
 
 .p-float-label {
   input {
-    &:focus ~ label {
+    &:not(.p-invalid):focus ~ label {
       color: var(--primary-color);
+    }
+    &.p-invalid ~ label {
+      color: #E94137;
+    }
+  }
+}
+
+.p-steps {
+  .p-steps-item {
+    &.p-highlight {
+      .p-steps-number {
+        background-color: var(--primary-color);
+      }
+    }
+    .p-menuitem-link {
+      &:not(.p-disabled) {
+        &:focus {
+          background: transparentize($color: $primaryColor, $amount: 0.93);
+        }
+      }
     }
   }
 }
