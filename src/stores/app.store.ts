@@ -35,6 +35,22 @@ export const useAppStore = defineStore("app", () => {
   }
 
   /**
+   * Load light or dark theme depending on user preferences or OS preferences
+   * @param userThemeMode: string | null
+   */
+  function loadTheme(userThemeMode: string | null): void {
+    if (
+      userThemeMode === THEME_MODE_DARK ||
+      (!userThemeMode &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches)
+    ) {
+      changeTheme(darkTheme);
+    } else {
+      changeTheme(defaultTheme);
+    }
+  }
+
+  /**
    * Retrieve user theme mode from local storage
    */
   function retrieveUserThemeMode(): void {
@@ -54,22 +70,6 @@ export const useAppStore = defineStore("app", () => {
       localStorage.setItem(THEME_MODE_KEY, themeMode);
     }
     userThemeMode.value = themeMode;
-  }
-
-  /**
-   * Load light or dark theme depending on user preferences or OS preferences
-   * @param userThemeMode: string | null
-   */
-  function loadTheme(userThemeMode: string | null): void {
-    if (
-      userThemeMode === THEME_MODE_DARK ||
-      (!userThemeMode &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches)
-    ) {
-      changeTheme(darkTheme);
-    } else {
-      changeTheme(defaultTheme);
-    }
   }
 
   function showScreenLoader(value: boolean, time = 0) {
