@@ -36,6 +36,7 @@
       </div>
       <div class="field my-6">
         <PButton
+          @click="$router.push({ name: 'Forgot Password' })"
           class="p-button-sm bg-transparent enabled:text-red-600 hover:enabled:text-red-600 focus:enabled:bg-red-600/10 hover:enabled:bg-red-600/10"
         >
           <i class="pi pi-lock mr-2"></i>

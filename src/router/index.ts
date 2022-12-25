@@ -34,6 +34,7 @@ const router = createRouter({
           children: [
             {
               path: "",
+              name: "Register",
               component: () =>
                 import(
                   "@/app/modules/account/presentation/register/steps/PersonalInfo.vue"

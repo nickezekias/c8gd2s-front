@@ -5,7 +5,7 @@
 
       <template #end>
         <NavLink
-          to="/login"
+          :to="{ name: 'Login' }"
           class="p-button-sm bg-transparent text-primary hover:bg-primary/5 mr-2 dark:text-accent dark:hover:bg-accent/10"
           exactActiveClass="bg-primary/5 dark:bg-accent/10"
         >
@@ -14,7 +14,7 @@
         </NavLink>
 
         <NavLink
-          to="/register"
+          :to="{ name: 'Register' }"
           class="p-button-sm bg-transparent text-primary hover:bg-primary/5 dark:text-accent dark:hover:bg-accent/10 mr-2"
           exactActiveClass="bg-primary/5 dark:bg-accent/10"
         >
