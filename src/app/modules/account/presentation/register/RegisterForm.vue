@@ -30,15 +30,19 @@ const $i18n = useI18n();
 const items = ref([
   {
     label: $i18n.t("views.auth.register.step1"),
-    to: "/register",
+    to: { name: "register" },
   },
   {
     label: $i18n.t("views.auth.register.step2"),
-    to: "/register/business-information",
+    to: { name: "register.businessInformation" },
   },
   {
     label: $i18n.t("views.auth.register.step3"),
-    to: "/register/workspace",
+    to: { name: "register.workspaceInformation" },
+  },
+  {
+    label: $i18n.t("views.auth.register.step4"),
+    to: { name: "register.confirmation" },
   },
 ]);
 const formObject: any = ref({});
@@ -50,8 +54,6 @@ const nextPage = (event: any) => {
   router.push(items.value[event.pageIndex + 1].to);
 };
 const prevPage = (event: any) => {
-  console.log("items", items.value);
-  console.log("Event", event);
   router.push(items.value[event.pageIndex - 1].to);
 };
 const complete = () => {

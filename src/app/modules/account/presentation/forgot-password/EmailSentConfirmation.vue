@@ -27,7 +27,7 @@
     </template>
     <template #footer>
       <PButton
-        @click="$router.push({ name: 'Login' })"
+        @click="$router.push({ name: 'login' })"
         icon="pi pi-angle-left"
         :label="$t('forms.labels.backToLogin')"
         class="w-full bg-primary dark:bg-accent hover:enabled:bg-primary-700 dark:hover:enabled:bg-accent-700 focus:enabled:bg-primary-700 dark:focus:enabled:bg-accent-700"

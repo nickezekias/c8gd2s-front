@@ -43,7 +43,7 @@
             class="hidden dark:block w-72 -mb-6"
           />
         </div>
-        <RegisterForm class="w-full lg:w-6/12"></RegisterForm>
+        <RegisterForm class="w-full lg:w-9/12"></RegisterForm>
       </div>
     </div>
   </div>

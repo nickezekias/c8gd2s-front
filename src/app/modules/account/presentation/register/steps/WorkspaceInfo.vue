@@ -80,8 +80,8 @@
             icon="pi pi-angle-left"
           />
           <PButton
-            :label="$t('forms.labels.register')"
-            @click="submit()"
+            :label="$t('forms.labels.next')"
+            @click="nextPage()"
             icon="pi pi-angle-right"
             iconPos="right"
           />
@@ -138,6 +138,28 @@ const v$ = useVuelidate(rules, state, { $autoDirty: true });
 
 const prevPage = () => {
   emit("prev-page", { pageIndex: 2 });
+};
+
+const nextPage = async () => {
+  const isFormValid = await v$.value.$validate();
+  if (isFormValid) {
+    emit("next-page", {
+      formData: {
+        wsCurrency: state.currency,
+        wsTimezone: state.timezone,
+        wsTimeFormat: state.timeFormat,
+        wsDateFormat: state.dateFormat,
+      },
+      pageIndex: 2,
+    });
+  } else {
+    $toast.add({
+      severity: "error",
+      summary: $i18n.t("forms.messages.formInvalid.title"),
+      detail: $i18n.t("forms.messages.formInvalid.detail"),
+      life: 5000,
+    });
+  }
 };
 
 const submit = async () => {

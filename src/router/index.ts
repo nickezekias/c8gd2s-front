@@ -15,7 +15,7 @@ const router = createRouter({
         },
         {
           path: "/forgot-password",
-          name: "Forgot Password",
+          name: "forgotPassword",
           component: () =>
             import(
               "@/app/modules/account/presentation/forgot-password/Index.vue"
@@ -23,7 +23,7 @@ const router = createRouter({
         },
         {
           path: "/login",
-          name: "Login",
+          name: "login",
           component: () =>
             import("@/app/modules/account/presentation/login/Index.vue"),
         },
@@ -34,7 +34,7 @@ const router = createRouter({
           children: [
             {
               path: "",
-              name: "Register",
+              name: "register",
               component: () =>
                 import(
                   "@/app/modules/account/presentation/register/steps/PersonalInfo.vue"
@@ -42,6 +42,7 @@ const router = createRouter({
             },
             {
               path: "business-information",
+              name: "register.businessInformation",
               component: () =>
                 import(
                   "@/app/modules/account/presentation/register/steps/BusinessInfo.vue"
@@ -49,16 +50,25 @@ const router = createRouter({
             },
             {
               path: "workspace",
+              name: "register.workspaceInformation",
               component: () =>
                 import(
                   "@/app/modules/account/presentation/register/steps/WorkspaceInfo.vue"
+                ),
+            },
+            {
+              path: "confirmation",
+              name: "register.confirmation",
+              component: () =>
+                import(
+                  "@/app/modules/account/presentation/register/steps/ReviewInfo.vue"
                 ),
             },
           ],
         },
         {
           path: "/reset-password",
-          name: "Reset Password",
+          name: "resetPassword",
           component: () =>
             import(
               "@/app/modules/account/presentation/reset-password/Index.vue"

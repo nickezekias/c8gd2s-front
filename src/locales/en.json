@@ -95,6 +95,8 @@
                 "step2-description": "Enter your business information",
                 "step3": "Workspace",
                 "step3-description": "Enter your workspace region info",
+                "step4": "Confirm",
+                "step4-description": "Verify and confirm filled information",
                 "welcome": {
                     "title": "Welcome",
                     "detail": "Connecting Dots is your platform to find suitable partners and financiers."
