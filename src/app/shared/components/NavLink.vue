@@ -1,6 +1,6 @@
 <template>
   <RouterLink
-    :to="to"
+    :to="(to as RouteLocationRaw)"
     class="p-button router-link hover:outline-none active:outline-none outline-none"
     :exact-active-class="exactActiveClass"
     :active-class="activeClass"
@@ -20,7 +20,6 @@ defineProps({
     type: String,
   },
   to: {
-    type: String,
     required: true,
   },
   buttonType: {

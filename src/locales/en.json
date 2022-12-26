@@ -99,6 +99,12 @@
                     "title": "Welcome",
                     "detail": "Connecting Dots is your platform to find suitable partners and financiers."
                 }
+            },
+            "resetPassword": {
+                "welcome": {
+                    "title": "Reset Password",
+                    "detail": "Gain back access to your back office and find the best of the best for your business."
+                }
             }
         },
         "layouts": {

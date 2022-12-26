@@ -1,6 +1,6 @@
-import { IUseCase } from "@/app/base/IUseCase";
-import AuthRepository from "../AuthRepository";
-import User from "../User";
+import type { IUseCase } from "@/app/base/IUseCase";
+import type AuthRepository from "../AuthRepository";
+import type User from "../User";
 
 export default class Register
   implements IUseCase<Record<string, string>, User>

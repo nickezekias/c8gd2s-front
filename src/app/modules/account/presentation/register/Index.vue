@@ -51,7 +51,7 @@
 
 <script setup lang="ts">
 import RegisterForm from "@/app/modules/account/presentation/register/RegisterForm.vue";
-import GuestAppBar from "@/shared/layouts/GuestAppBar.vue";
+import GuestAppBar from "@/app/shared/layouts/GuestAppBar.vue";
 </script>
 
 <style scoped>

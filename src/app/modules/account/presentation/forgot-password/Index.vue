@@ -60,7 +60,7 @@
 </template>
 
 <script setup lang="ts">
-import GuestAppBar from "@/shared/layouts/GuestAppBar.vue";
+import GuestAppBar from "@/app/shared/layouts/GuestAppBar.vue";
 import { ref } from "vue";
 import EmailSentConfirmation from "./EmailSentConfirmation.vue";
 import ForgotPasswordForm from "./ForgotPasswordForm.vue";

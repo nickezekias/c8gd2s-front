@@ -30,6 +30,6 @@
 
 <script setup lang="ts">
 import Toolbar from "primevue/toolbar";
-import LanguageMenu from "@/shared/components/LanguageMenu.vue";
+import LanguageMenu from "@/app/shared/components/LanguageMenu.vue";
 import ThemeModeMenu from "../components/ThemeModeMenu.vue";
 </script>

@@ -133,6 +133,8 @@ import { useVuelidate } from "@vuelidate/core";
 import { required, email, minLength, sameAs } from "@vuelidate/validators";
 import { useI18n } from "vue-i18n";
 
+import { MIN_PWD_LENGTH } from "@/app/utils/constants";
+
 const $toast = useToast();
 const emit = defineEmits(["next-page"]);
 const $i18n = useI18n();
@@ -145,8 +147,6 @@ const state = reactive({
   password: "",
   confirmPassword: "",
 });
-
-const MIN_PWD_LENGTH = 8;
 
 // form validation rules
 const rules = computed(() => ({
@@ -168,6 +168,9 @@ const nextPage = async () => {
         firstName: state.firstName,
         lastName: state.lastName,
         email: state.email,
+        phone: state.phone,
+        password: state.password,
+        confirmPassword: state.confirmPassword,
       },
       pageIndex: 0,
     });

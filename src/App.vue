@@ -10,7 +10,7 @@
 import { onMounted, onUnmounted } from "vue";
 import { RouterView } from "vue-router";
 import Toast from "primevue/toast";
-import ScreenLoader from "@/shared/components/ScreenLoader.vue";
+import ScreenLoader from "@/app/shared/components/ScreenLoader.vue";
 
 import { useAppStore } from "@/stores/app.store";
 

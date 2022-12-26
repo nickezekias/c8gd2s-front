@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
-import GuestLayout from "@/shared/layouts/GuestLayout.vue";
+import GuestLayout from "@/app/shared/layouts/GuestLayout.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -55,6 +55,14 @@ const router = createRouter({
                 ),
             },
           ],
+        },
+        {
+          path: "/reset-password",
+          name: "Reset Password",
+          component: () =>
+            import(
+              "@/app/modules/account/presentation/reset-password/Index.vue"
+            ),
         },
       ],
     },

@@ -48,7 +48,7 @@
 </template>
 
 <script setup lang="ts">
-import GuestAppBar from "@/shared/layouts/GuestAppBar.vue";
+import GuestAppBar from "@/app/shared/layouts/GuestAppBar.vue";
 import LoginForm from "@/app/modules/account/presentation/login/LoginForm.vue";
 </script>
 
