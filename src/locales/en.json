@@ -101,6 +101,10 @@
                 }
             },
             "resetPassword": {
+                "success": {
+                    "title": "Password Reset",
+                    "detail": "Your password has been reset successfully, you will be redirected to the login page shortly."
+                },
                 "welcome": {
                     "title": "Reset Password",
                     "detail": "Gain back access to your back office and find the best of the best for your business."

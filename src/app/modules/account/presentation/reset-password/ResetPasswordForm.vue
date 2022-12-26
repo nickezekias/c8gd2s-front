@@ -65,10 +65,12 @@ import { useVuelidate } from "@vuelidate/core";
 import { required, minLength, sameAs } from "@vuelidate/validators";
 import { useI18n } from "vue-i18n";
 import { MIN_PWD_LENGTH } from "@/app/utils/constants";
+import { useRouter } from "vue-router";
 
 const $toast = useToast();
 const emit = defineEmits(["next-page"]);
 const $i18n = useI18n();
+const $router = useRouter();
 
 const state = reactive({
   password: "",
@@ -86,12 +88,15 @@ const v$ = useVuelidate(rules, state, { $autoDirty: true });
 const nextPage = async () => {
   const isFormValid = await v$.value.$validate();
   if (isFormValid) {
-    emit("next-page", {
-      formData: {
-        password: state.password,
-        confirmPassword: state.confirmPassword,
-      },
+    $toast.add({
+      severity: "success",
+      summary: $i18n.t("views.auth.resetPassword.success.title"),
+      detail: $i18n.t("views.auth.resetPassword.success.detail"),
+      life: 5000,
     });
+    window.setTimeout(() => {
+      $router.push({ name: "Login" });
+    }, 6000);
   } else {
     $toast.add({
       severity: "error",
