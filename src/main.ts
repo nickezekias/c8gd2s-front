@@ -19,11 +19,10 @@ import "../public/css/tailwind.css";
 // import "./assets/css/vars.css";
 import "./assets/main.css";
 
-import TwCard from "./shared/components/TwCard.vue";
+import TwCard from "./app/shared/components/TwCard.vue";
 
 import PButton from "primevue/button";
-import TwButton from "./shared/components/TwButton.vue";
-import NavLink from "./shared/components/NavLink.vue";
+import NavLink from "./app/shared/components/NavLink.vue";
 import InputText from "primevue/inputtext";
 import Card from "primevue/card";
 import ToastService from "primevue/toastservice";
@@ -42,7 +41,6 @@ app.use(ToastService);
 
 // eslint-disable-next-line vue/no-reserved-component-names, vue/multi-word-component-names
 app.component("PButton", PButton);
-app.component("TwButton", TwButton);
 app.component("NavLink", NavLink);
 app.component("InputText", InputText);
 app.component("Card", Card);
