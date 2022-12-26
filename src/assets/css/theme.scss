@@ -52,8 +52,8 @@ p {
 
 .p-button {
   background-color: var(--primary-color);
-  &:enabled:hover {
-    background: var(--primary-color);
+  &:enabled:hover, &:enabled:focus {
+    background: var(--primary-color-700);
   }
 }
 

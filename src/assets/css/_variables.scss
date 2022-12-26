@@ -1,15 +1,19 @@
 $primaryColor: #162c4f;
+$primaryColor700: #12213C;
 $primaryColorText: #ffffff;
 $primaryColorDark: #82b541;
+$primaryColorDark700: #6C9636;
 $primaryColorDarkText: #000000;
 
 @mixin light-mode {
   --primary-color: #{$primaryColor};
+  --primary-color-700: #{$primaryColor700};
   --primary-color-text: #{$primaryColorText};
 }
 
 @mixin dark-mode {
   --primary-color: #{$primaryColorDark};
+  --primary-color-700: #{$primaryColorDark700};
   --primary-color-text: #{$primaryColorDarkText};
 }
 
